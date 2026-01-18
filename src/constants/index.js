@@ -21,18 +21,22 @@ export const services = [
     {
         title: "Full Stack Developer",
         icon: "k", // placeholder
+        description: "Building end-to-end web solutions with seamless frontend and backend integration."
     },
     {
         title: "Mobile App Developer",
         icon: "mobile",
+        description: "Creating native and cross-platform mobile applications for iOS and Android."
     },
     {
         title: "Backend Engineer",
         icon: "backend",
+        description: "Developing robust server-side logic, APIs, and scalable architecture."
     },
     {
         title: "Database Architect",
         icon: "database",
+        description: "Designing efficient database schemas and optimizing data storage performance."
     },
 ];
 
@@ -182,6 +186,13 @@ export const projects = [
         image: promoteWithUsImg,
         source_code_link: "#", // Private
         isPrivate: true,
+        key_features: [
+            "Comprehensive brand showcase management interface",
+            "Real-time lead generation and tracking dashboard",
+            "High-performance responsive design for all devices",
+            "Efficient content management system (CMS)"
+        ],
+        technical_challenges: "Optimizing the platform for high traffic loads while ensuring real-time data synchronization between the frontend and backend. Implemented efficient database indexing and caching mechanisms to handle concurrent users."
     },
     {
         name: "WanderWork",
@@ -204,6 +215,13 @@ export const projects = [
         image: wanderWorkImg,
         source_code_link: "#",
         isPrivate: true,
+        key_features: [
+            "Mobile-first design for travelers and digital nomads",
+            "Seamless location-based recommendations",
+            "Secure user authentication and profile management",
+            "Integrated map services for destination tracking"
+        ],
+        technical_challenges: "Ensuring smooth performance on lower-end mobile devices and managing offline data synchronization. Utilized efficient state management and local storage solutions to improve the user experience in areas with poor connectivity."
     },
     {
         name: "Trading Dashboard",
@@ -226,6 +244,13 @@ export const projects = [
         image: tradingImg,
         source_code_link: "#",
         isPrivate: true,
+        key_features: [
+            "Live market data updates via WebSockets",
+            "Interactive and customizable charting tools",
+            "Personalized watchlists and alerts",
+            "Low-latency performance optimization"
+        ],
+        technical_challenges: "Handling high-frequency data updates without causing UI freezes or lag. Implemented efficient data throttling and rendering optimizations to ensure a smooth charting experience even during peak market volatility."
     },
     {
         name: "Faculty Management",
@@ -248,6 +273,13 @@ export const projects = [
         image: facultyImg,
         source_code_link: "#",
         isPrivate: true,
+        key_features: [
+            "Role-based access control (RBAC) for secure management",
+            "Automated subject mapping and scheduling",
+            "Comprehensive Faculty CRUD operations",
+            "Detailed reporting and analytics module"
+        ],
+        technical_challenges: "Designing a normalized database schema to handle complex relationships between faculties, subjects, and schedules. Implemented rigorous validation rules and transaction management to maintain data integrity."
     },
     {
         name: "Mutual Fund Portfolio",
@@ -270,6 +302,13 @@ export const projects = [
         image: mutualFundImg,
         source_code_link: "#",
         isPrivate: true,
+        key_features: [
+            "Automated Excel file parsing and data extraction",
+            "Secure and structured SQL database storage",
+            "Visual dashboard for portfolio analysis",
+            "Robust API for data retrieval and updates"
+        ],
+        technical_challenges: "Accurately parsing complex and varying Excel file formats while handling large datasets. Developed a robust file processing pipeline with error handling and validation to ensure clean data ingestion."
     },
     {
         name: "Thrill_Wanderer",
@@ -288,5 +327,12 @@ export const projects = [
         image: thrillWandererImg,
         source_code_link: "#",
         isPrivate: true,
+        key_features: [
+            "Visually rich destination showcases",
+            "Easy-to-use itinerary builder",
+            "Responsive design for seamless mobile browsing",
+            "Integrated social sharing features"
+        ],
+        technical_challenges: "Balancing high-quality image assets with page load performance. Implemented lazy loading, image optimization techniques, and a CDN to ensure fast load times without compromising visual quality."
     },
 ];

@@ -81,24 +81,27 @@ const ProjectDetails = () => {
                             {project.description}
                         </p>
 
-                        {/* Placeholder for extended details */}
-                        <div className="mt-8 space-y-6">
-                            <h3 className="text-xl font-bold text-white">Key Features</h3>
-                            <ul className="list-disc list-inside text-slate-400 space-y-2">
-                                <li>Responsive and interactive user interface</li>
-                                <li>Optimized backend performance for scalability</li>
-                                <li>Secure authentication and data handling</li>
-                                <li>Seamless API integration</li>
-                            </ul>
-                        </div>
+                        {/* Extended Details: Key Features */}
+                        {project.key_features && project.key_features.length > 0 && (
+                            <div className="mt-8 space-y-6">
+                                <h3 className="text-xl font-bold text-white">Key Features</h3>
+                                <ul className="list-disc list-inside text-slate-400 space-y-2">
+                                    {project.key_features.map((feature, index) => (
+                                        <li key={index}>{feature}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
                     </div>
 
-                    <div className="bg-slate-900/50 p-8 rounded-2xl border border-white/5 backdrop-blur-sm">
-                        <h2 className="text-2xl font-bold text-white mb-6">Technical Challenges</h2>
-                        <p className="text-slate-300 leading-relaxed">
-                            Building this project required overcoming several technical hurdles, including optimizing data retrieval speeds and ensuring cross-platform compatibility. The solution involved implementing advanced caching strategies and modular code architecture.
-                        </p>
-                    </div>
+                    {project.technical_challenges && (
+                        <div className="bg-slate-900/50 p-8 rounded-2xl border border-white/5 backdrop-blur-sm">
+                            <h2 className="text-2xl font-bold text-white mb-6">Technical Challenges</h2>
+                            <p className="text-slate-300 leading-relaxed">
+                                {project.technical_challenges}
+                            </p>
+                        </div>
+                    )}
                 </div>
 
                 {/* Right Column: Actions & Stack */}

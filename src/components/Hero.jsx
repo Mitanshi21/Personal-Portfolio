@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import resume from "../assets/mitanshi_resume.pdf";
 import selfProfessional from "../assets/self_professional.png";
+import selfImg from "../assets/self_img.jpeg";
 
 const Hero = () => {
     return (
@@ -74,9 +75,13 @@ const Hero = () => {
                         {/* Center Glow */}
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-gradient-to-br from-[#915EFF] to-[#00CEA8] rounded-full blur-[60px] opacity-60" />
 
-                        {/* Foreground Element: Initials or Logo Concept */}
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-slate-900 border border-slate-700 rounded-2xl flex items-center justify-center shadow-2xl skew-y-3 hover:skew-y-0 transition-transform duration-500 cursor-pointer">
-                            <span className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">ML</span>
+                        {/* Foreground Element: Self Image */}
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 md:w-64 md:h-64 bg-slate-900 border-4 border-slate-700/50 rounded-full flex items-center justify-center shadow-2xl overflow-hidden hover:scale-105 transition-transform duration-500">
+                            <img
+                                src={selfImg}
+                                alt="Mitanshi Lakdawala"
+                                className="w-full h-full object-cover scale-110"
+                            />
                         </div>
                     </div>
                 </motion.div>

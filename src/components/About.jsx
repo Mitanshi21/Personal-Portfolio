@@ -14,7 +14,7 @@ const getIcon = (title) => {
     return <FaCode />;
 };
 
-const ServiceCard = ({ index, title }) => (
+const ServiceCard = ({ index, title, description }) => (
     <motion.div
         variants={fadeIn("up", "spring", index * 0.5, 0.75)}
         className='group w-full'
@@ -31,7 +31,7 @@ const ServiceCard = ({ index, title }) => (
             </h3>
 
             <p className="text-slate-400 text-sm text-center leading-relaxed">
-                Crafting robust solutions with a focus on scalability and user experience.
+                {description}
             </p>
         </div>
     </motion.div>
@@ -49,7 +49,7 @@ const About = () => {
                 variants={fadeIn("", "", 0.1, 1)}
                 className='mt-4 text-slate-300 text-[17px] max-w-3xl leading-[30px]'
             >
-                I am a skilled developer with experience in building comprehensive web solutions.
+                I am a passionate Full Stack Developer turning ideas into immersive, high-performance web & mobile applications.
                 My expertise spans across the entire stack, from designing intuitive frontend interfaces
                 to architecting secure and efficient backend systems. I thrive in creating
                 seamless digital experiences that drive value.
