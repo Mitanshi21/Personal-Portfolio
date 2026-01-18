@@ -1,7 +1,28 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Footer = () => {
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const handleLinkClick = (id) => {
+        if (location.pathname !== "/") {
+            navigate("/");
+            setTimeout(() => {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                }
+            }, 100);
+        } else {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    };
+
     return (
         <footer className="w-full bg-slate-900 border-t border-slate-800 pt-10 pb-10 mt-20 relative z-10">
             <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
@@ -36,9 +57,9 @@ const Footer = () => {
 
                 {/* Quick Links (Optional, but adds weight) */}
                 <div className="flex gap-6 text-sm font-medium text-slate-400">
-                    <a href="#about" className="hover:text-white transition-colors">About</a>
-                    <a href="#work" className="hover:text-white transition-colors">Work</a>
-                    <a href="#contact" className="hover:text-white transition-colors">Contact</a>
+                    <button onClick={() => handleLinkClick("about")} className="hover:text-white transition-colors uppercase">About</button>
+                    <button onClick={() => handleLinkClick("work")} className="hover:text-white transition-colors uppercase">Work</button>
+                    <button onClick={() => handleLinkClick("contact")} className="hover:text-white transition-colors uppercase">Contact</button>
                 </div>
             </div>
         </footer>
