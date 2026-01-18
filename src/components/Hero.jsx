@@ -37,12 +37,17 @@ const Hero = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.3 }}
                     >
-                        <a
-                            href="#work"
+                        <button
+                            onClick={() => {
+                                const workSection = document.getElementById("work");
+                                if (workSection) {
+                                    workSection.scrollIntoView({ behavior: "smooth" });
+                                }
+                            }}
                             className="bg-[#915EFF] text-white py-3 px-8 rounded-full font-bold shadow-lg hover:bg-purple-600 hover:shadow-purple-500/30 transition-all transform hover:-translate-y-1"
                         >
                             View Projects
-                        </a>
+                        </button>
                         <a
                             href={resume}
                             download="Mitanshi_Lakdawala_Resume.pdf"
