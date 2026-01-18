@@ -78,7 +78,7 @@ const Hero = () => {
             </div>
 
             {/* Scroll Indicator */}
-            <div className='absolute bottom-8 w-full flex justify-center items-center z-10'>
+            <div className='absolute bottom-8 w-full hidden sm:flex justify-center items-center z-10'>
                 <a href='#about'>
                     <div className='w-[30px] h-[54px] rounded-3xl border-2 border-slate-500 flex justify-center items-start p-2'>
                         <motion.div

@@ -69,7 +69,7 @@ const Tech = () => {
                             className={`flex flex-col gap-4 md:gap-6 relative p-4 md:p-6 rounded-2xl bg-slate-900/20 border border-slate-800/50 ${isLastOdd ? 'md:col-span-2' : ''}`}
                         >
                             {/* Category Label */}
-                            <div className={`flex items-center gap-4 mb-2 ${isLastOdd ? 'justify-center' : ''}`}>
+                            <div className={`flex items-center gap-4 mb-2 ${isLastOdd ? 'justify-start md:justify-center' : ''}`}>
                                 <h3 className="text-xl font-bold text-white pl-3 border-l-4 border-indigo-500">{category}</h3>
                             </div>
 
