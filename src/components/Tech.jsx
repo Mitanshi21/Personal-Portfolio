@@ -52,13 +52,13 @@ const techCategories = {
 
 const Tech = () => {
     return (
-        <div className="flex flex-col gap-14 relative z-10 w-full">
+        <div className="flex flex-col gap-8 md:gap-14 relative z-10 w-full">
             <motion.div variants={styles.sectionHeadText}>
                 <p className={`${styles.sectionSubText} text-center`}>My tools</p>
-                <h2 className={`${styles.sectionHeadText} text-center mb-10`}>Technologies.</h2>
+                <h2 className={`${styles.sectionHeadText} text-center mb-6 md:mb-10`}>Technologies.</h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
                 {Object.entries(techCategories).map(([category, items], index) => {
                     // Check if it's the last item and we have an odd number of categories
                     const isLastOdd = index === Object.keys(techCategories).length - 1 && Object.keys(techCategories).length % 2 !== 0;
@@ -66,7 +66,7 @@ const Tech = () => {
                     return (
                         <div
                             key={category}
-                            className={`flex flex-col gap-6 relative p-6 rounded-2xl bg-slate-900/20 border border-slate-800/50 ${isLastOdd ? 'md:col-span-2' : ''}`}
+                            className={`flex flex-col gap-4 md:gap-6 relative p-4 md:p-6 rounded-2xl bg-slate-900/20 border border-slate-800/50 ${isLastOdd ? 'md:col-span-2' : ''}`}
                         >
                             {/* Category Label */}
                             <div className={`flex items-center gap-4 mb-2 ${isLastOdd ? 'justify-center' : ''}`}>
@@ -74,16 +74,16 @@ const Tech = () => {
                             </div>
 
                             {/* Grid */}
-                            <div className={`flex flex-row flex-wrap gap-4 ${isLastOdd ? 'justify-center' : ''}`}>
+                            <div className={`flex flex-row flex-wrap gap-3 md:gap-4 justify-center md:justify-start ${isLastOdd ? 'md:justify-center' : ''}`}>
                                 {items.map((technology) => (
                                     <div
-                                        className='w-24 h-24 flex flex-col items-center justify-center p-2 bg-slate-900 border border-slate-800 rounded-xl hover:border-indigo-500 hover:shadow-[0_0_15px_rgba(99,102,241,0.3)] transition-all duration-300 group cursor-default'
+                                        className='w-20 h-20 md:w-24 md:h-24 flex flex-col items-center justify-center p-2 bg-slate-900 border border-slate-800 rounded-xl hover:border-indigo-500 hover:shadow-[0_0_15px_rgba(99,102,241,0.3)] transition-all duration-300 group cursor-default'
                                         key={technology}
                                     >
-                                        <div className="text-3xl mb-2 transform group-hover:scale-110 transition-transform duration-300 group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">
+                                        <div className="text-2xl md:text-3xl mb-2 transform group-hover:scale-110 transition-transform duration-300 group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">
                                             {getIcon(technology)}
                                         </div>
-                                        <div className="text-slate-400 text-[10px] font-semibold text-center group-hover:text-white transition-colors">
+                                        <div className="text-slate-400 text-[9px] md:text-[10px] font-semibold text-center group-hover:text-white transition-colors">
                                             {technology}
                                         </div>
                                     </div>

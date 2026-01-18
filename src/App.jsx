@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Lenis from "lenis";
 
 import { Home, AllProjects, ProjectDetails } from "./components";
@@ -21,13 +21,13 @@ const App = () => {
   }, []);
 
   return (
-    <BrowserRouter basename="/Personal-Portfolio">
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<AllProjects />} />
         <Route path="/project/:id" element={<ProjectDetails />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
